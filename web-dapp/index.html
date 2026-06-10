@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GM Secure Chat - MetaMask 存证</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="header">
+      <div>
+        <p class="eyebrow">GM Secure Chat</p>
+        <h1>MetaMask 链上存证</h1>
+      </div>
+      <button id="connectBtn">连接 MetaMask</button>
+    </section>
+
+    <section class="status-grid">
+      <div class="status-card">
+        <span>钱包地址</span>
+        <strong id="accountText">未连接</strong>
+      </div>
+      <div class="status-card">
+        <span>网络</span>
+        <strong id="networkText">等待连接</strong>
+      </div>
+      <div class="status-card">
+        <span>合约</span>
+        <strong id="contractText">未设置</strong>
+      </div>
+    </section>
+
+    <section class="panel">
+      <label>
+        Sepolia 合约地址
+        <input id="contractAddress" placeholder="部署后粘贴 0x... 合约地址">
+      </label>
+      <button id="saveContractBtn" class="secondary">保存合约地址</button>
+    </section>
+
+    <section id="autoPanel" class="panel auto-panel hidden">
+      <div>
+        <strong>已从 GM Secure Chat 自动载入一条存证。</strong>
+        <p>检查合约地址和字段无误后，点击确认上链；随后按 MetaMask 弹窗完成签名和交易确认。</p>
+      </div>
+      <button id="confirmChainBtn">确认上链</button>
+    </section>
+
+    <section id="walletBindPanel" class="panel transfer-panel hidden">
+      <div class="transfer-title">
+        <div>
+          <strong>对方钱包归属验证</strong>
+          <p>该请求来自局域网国密通道。点击后使用 MetaMask 对同一份绑定声明签名，用于证明“当前通信 SM2 身份”和“当前 Sepolia 钱包”属于同一控制者。</p>
+        </div>
+        <button id="signWalletBindBtn">签名并回传</button>
+      </div>
+      <div class="form-grid">
+        <label>
+          请求方
+          <input id="walletBindRequester" readonly>
+        </label>
+        <label>
+          待验证钱包
+          <input id="walletBindAddress" readonly>
+        </label>
+        <label class="wide">
+          绑定 nonce
+          <input id="walletBindNonce" readonly>
+        </label>
+        <label class="wide">
+          MetaMask 待签名声明
+          <textarea id="walletBindMessage" rows="8" readonly></textarea>
+        </label>
+      </div>
+    </section>
+
+    <section id="transferPanel" class="panel transfer-panel hidden">
+      <div class="transfer-title">
+        <div>
+          <strong>局域网国密身份转账</strong>
+          <p>该转账请求已由 Qt 客户端用 SM3 摘要和 SM2 签名预校验，点击后由 MetaMask 在 Sepolia 上完成测试币转账。</p>
+        </div>
+        <button id="sendTransferBtn">确认 Sepolia 转账</button>
+      </div>
+      <div class="form-grid">
+        <label>
+          付款钱包
+          <input id="transferFrom" readonly>
+        </label>
+        <label>
+          收款钱包
+          <input id="transferTo" readonly>
+        </label>
+        <label>
+          金额 SepoliaETH
+          <input id="transferAmount" readonly>
+        </label>
+        <label>
+          收款用户
+          <input id="transferPeer" readonly>
+        </label>
+        <label class="wide">
+          转账意图 SM3
+          <input id="transferDigest" readonly>
+        </label>
+        <label class="wide">
+          SM2 预校验证据
+          <textarea id="transferEvidence" rows="8" readonly></textarea>
+        </label>
+      </div>
+    </section>
+
+    <section class="panel">
+      <label>
+        导入本地存证文件
+        <input id="ledgerFile" type="file" accept=".jsonl,.txt,.json">
+      </label>
+    </section>
+
+    <section class="panel form-grid">
+      <label>
+        存证类型
+        <select id="recordType">
+          <option value="double_signature_identity_binding">双签名身份绑定</option>
+          <option value="file_merkle_evidence">文件 Merkle 树存证</option>
+          <option value="session_hash_chain">国密会话哈希链</option>
+          <option value="tamper_lab">篡改攻击实验台</option>
+          <option value="lan_wallet_transfer">局域网钱包转账</option>
+        </select>
+      </label>
+      <label>
+        SM3 摘要/记录 Hash
+        <input id="sm3Digest" placeholder="64位十六进制，不足可留空">
+      </label>
+      <label>
+        Merkle Root
+        <input id="merkleRoot" placeholder="文件存证时填写 64位十六进制">
+      </label>
+      <label>
+        会话链头
+        <input id="sessionHead" placeholder="消息链存证时填写 64位十六进制">
+      </label>
+      <label>
+        本机 SM2 指纹
+        <input id="gmFingerprint" placeholder="例如 A91F:23BC:...">
+      </label>
+      <label>
+        对方 SM2 指纹
+        <input id="peerFingerprint" placeholder="可选">
+      </label>
+      <label class="wide">
+        元数据 JSON
+        <textarea id="metadata" rows="6" placeholder='{"source":"gmsecurechat","note":"demo"}'></textarea>
+      </label>
+    </section>
+
+    <section class="actions">
+      <button id="signBtn" class="secondary">钱包签名存证内容</button>
+      <button id="submitBtn">提交 Sepolia 存证</button>
+    </section>
+
+    <section class="panel">
+      <h2>输出</h2>
+      <pre id="output"></pre>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>

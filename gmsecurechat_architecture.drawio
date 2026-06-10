@@ -1,0 +1,255 @@
+<mxfile host="app.diagrams.net" modified="2026-06-01T16:40:00.000Z" agent="Codex" version="24.7.17" type="device">
+  <diagram id="gmsecurechat-five-layer" name="GM Secure Chat 五层架构">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1050" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title-bar" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2563EB;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="28" y="24" width="8" height="54" as="geometry"/>
+        </mxCell>
+        <mxCell id="title" value="系统总体架构：五层深度防御体系" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=30;fontStyle=1;fontColor=#0F172A;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="52" y="25" width="720" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="subtitle" value="GM Secure Chat：SM2 / SM3 / SM4 / ZUC 局域网安全通信 + 攻击实验 + 链上存证 + Hermes Agent 智能辅助" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;fontColor=#475569;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="54" y="66" width="1080" height="28" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="row-user" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#D7E3F4;" vertex="1" parent="1">
+          <mxGeometry x="25" y="108" width="1550" height="108" as="geometry"/>
+        </mxCell>
+        <mxCell id="row-comm" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#D5EAE3;" vertex="1" parent="1">
+          <mxGeometry x="25" y="232" width="1550" height="108" as="geometry"/>
+        </mxCell>
+        <mxCell id="row-sm" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF7ED;strokeColor=#F3D7B6;" vertex="1" parent="1">
+          <mxGeometry x="25" y="356" width="1550" height="108" as="geometry"/>
+        </mxCell>
+        <mxCell id="row-audit" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FAF5FF;strokeColor=#E5D7F8;" vertex="1" parent="1">
+          <mxGeometry x="25" y="480" width="1550" height="108" as="geometry"/>
+        </mxCell>
+        <mxCell id="row-chain" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#DDE3EA;" vertex="1" parent="1">
+          <mxGeometry x="25" y="604" width="1550" height="108" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="label-user" value="用户层" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2563EB;strokeColor=none;fontColor=#FFFFFF;fontSize=18;fontStyle=1;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="46" y="134" width="230" height="56" as="geometry"/>
+        </mxCell>
+        <mxCell id="label-comm" value="通信层" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#10B981;strokeColor=none;fontColor=#FFFFFF;fontSize=18;fontStyle=1;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="46" y="258" width="230" height="56" as="geometry"/>
+        </mxCell>
+        <mxCell id="label-sm" value="国密安全层" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F59E0B;strokeColor=none;fontColor=#FFFFFF;fontSize=18;fontStyle=1;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="46" y="382" width="230" height="56" as="geometry"/>
+        </mxCell>
+        <mxCell id="label-audit" value="审计与实验层" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#7C3AED;strokeColor=none;fontColor=#FFFFFF;fontSize=18;fontStyle=1;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="46" y="506" width="230" height="56" as="geometry"/>
+        </mxCell>
+        <mxCell id="label-chain" value="链上扩展层" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#334155;strokeColor=none;fontColor=#FFFFFF;fontSize=18;fontStyle=1;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="46" y="630" width="230" height="56" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="a-client" value="A 客户端&#xa;Qt GUI / 本机密钥" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#BFD1E5;strokeWidth=2;fontSize=15;fontFamily=Microsoft YaHei;fontColor=#0F172A;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="315" y="128" width="150" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="b-client" value="B 客户端&#xa;局域网用户" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#BFD1E5;strokeWidth=2;fontSize=15;fontFamily=Microsoft YaHei;fontColor=#0F172A;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="495" y="128" width="150" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="c-client" value="C 客户端&#xa;群组成员" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#BFD1E5;strokeWidth=2;fontSize=15;fontFamily=Microsoft YaHei;fontColor=#0F172A;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="675" y="128" width="150" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="hermes" value="本机 Hermes Agent&#xa;WSL CLI：hermes -z" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2563EB;strokeWidth=3;fontSize=15;fontFamily=Microsoft YaHei;fontColor=#0F172A;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="875" y="128" width="245" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="shared-hermes" value="A 的 Hermes 共享代理&#xa;仅对通过 SM2 身份认证的指定用户出现" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;strokeWidth=2;dashed=1;fontSize=14;fontFamily=Microsoft YaHei;fontColor=#1E3A8A;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="128" width="310" height="68" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="udp" value="UDP 局域网发现&#xa;上线广播 / 单播回应" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B7D8CA;strokeWidth=2;fontSize=15;fontFamily=Microsoft YaHei;fontColor=#0F172A;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="315" y="252" width="190" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="route" value="单聊 / 群聊路由&#xa;群消息按成员分别加密" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B7D8CA;strokeWidth=2;fontSize=15;fontFamily=Microsoft YaHei;fontColor=#0F172A;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="535" y="252" width="210" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="file-transfer" value="文件分块传输&#xa;TransferID / 分片重组" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B7D8CA;strokeWidth=2;fontSize=15;fontFamily=Microsoft YaHei;fontColor=#0F172A;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="775" y="252" width="210" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="agent-proxy" value="Hermes 代理请求 / 响应&#xa;授权后 B 可经 A 调用本机 Agent" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#10B981;strokeWidth=2;dashed=1;fontSize=14;fontFamily=Microsoft YaHei;fontColor=#065F46;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="252" width="290" height="68" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="sm2-auth" value="SM2 身份认证与签名&#xa;公钥指纹 / 挑战应答" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#F0C17A;strokeWidth=2;fontSize=14;fontFamily=Microsoft YaHei;fontColor=#0F172A;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="315" y="376" width="180" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="sm3" value="SM3 摘要校验&#xa;消息 Hash / 公钥指纹" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#F0C17A;strokeWidth=2;fontSize=14;fontFamily=Microsoft YaHei;fontColor=#0F172A;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="515" y="376" width="175" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="sm4" value="SM4-CBC 消息加密&#xa;会话密钥 + IV + 密文" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#F0C17A;strokeWidth=2;fontSize=14;fontFamily=Microsoft YaHei;fontColor=#0F172A;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="710" y="376" width="205" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="sm2-wrap" value="SM2 密钥封装&#xa;保护 SM4 会话密钥" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#F0C17A;strokeWidth=2;fontSize=14;fontFamily=Microsoft YaHei;fontColor=#0F172A;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="935" y="376" width="190" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="zuc" value="ZUC 文件流加密&#xa;分块密钥流 / IV" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#F0C17A;strokeWidth=2;fontSize=14;fontFamily=Microsoft YaHei;fontColor=#0F172A;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1145" y="376" width="170" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="merkle" value="Merkle Root 完整性&#xa;文件块级存证" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#F0C17A;strokeWidth=2;fontSize=14;fontFamily=Microsoft YaHei;fontColor=#0F172A;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1335" y="376" width="170" height="68" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="trace-log" value="SM 算法中间值追踪&#xa;发送/接收同会话日志" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C7B6F2;strokeWidth=2;fontSize=14;fontFamily=Microsoft YaHei;fontColor=#0F172A;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="315" y="500" width="200" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="hash-chain" value="国密会话哈希链&#xa;prev + SM3 链头" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C7B6F2;strokeWidth=2;fontSize=14;fontFamily=Microsoft YaHei;fontColor=#0F172A;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="535" y="500" width="180" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="msg-tamper" value="消息篡改实验&#xa;originalVerify=true / tamperedVerify=false" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C7B6F2;strokeWidth=2;fontSize=13;fontFamily=Microsoft YaHei;fontColor=#0F172A;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="735" y="500" width="240" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="file-tamper" value="文件篡改实验&#xa;SM3 + Merkle Root 对比" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C7B6F2;strokeWidth=2;fontSize=14;fontFamily=Microsoft YaHei;fontColor=#0F172A;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="995" y="500" width="205" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="ledger" value="核验存证逻辑&#xa;gm_audit_ledger.jsonl 本地审计链" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C7B6F2;strokeWidth=2;fontSize=13;fontFamily=Microsoft YaHei;fontColor=#0F172A;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="500" width="260" height="68" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="dapp" value="Web DApp&#xa;导入本地存证记录" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C9D2DC;strokeWidth=2;fontSize=15;fontFamily=Microsoft YaHei;fontColor=#0F172A;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="315" y="624" width="170" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="metamask" value="MetaMask 钱包&#xa;签名 / 确认交易" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C9D2DC;strokeWidth=2;fontSize=15;fontFamily=Microsoft YaHei;fontColor=#0F172A;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="520" y="624" width="185" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="sepolia" value="Sepolia 测试链&#xa;交易哈希 txHash" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C9D2DC;strokeWidth=2;fontSize=15;fontFamily=Microsoft YaHei;fontColor=#0F172A;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="740" y="624" width="185" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="contract" value="GMAuditLedger 合约&#xa;submitRecord(...)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C9D2DC;strokeWidth=2;fontSize=15;fontFamily=Microsoft YaHei;fontColor=#0F172A;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="960" y="624" width="210" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="etherscan" value="Etherscan 查询&#xa;链上证据展示" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C9D2DC;strokeWidth=2;fontSize=15;fontFamily=Microsoft YaHei;fontColor=#0F172A;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="624" width="185" height="68" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="pipeline-bg" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F1F5F9;strokeColor=#D8E1EA;" vertex="1" parent="1">
+          <mxGeometry x="25" y="748" width="1550" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="pipeline-title" value="关键安全流水线：一条消息 / 一个文件如何到达对端" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=20;fontStyle=1;fontColor=#0F172A;fontFamily=Microsoft YaHei;" vertex="1" parent="1">
+          <mxGeometry x="48" y="762" width="560" height="34" as="geometry"/>
+        </mxCell>
+        <mxCell id="p1" value="1 明文输入&#xa;文字 / 文件 / 转账记录" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontSize=13;fontFamily=Microsoft YaHei;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="55" y="820" width="155" height="58" as="geometry"/>
+        </mxCell>
+        <mxCell id="p2" value="2 SM3 摘要&#xa;生成消息指纹" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DCFCE7;strokeColor=#22C55E;fontSize=13;fontFamily=Microsoft YaHei;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="245" y="820" width="145" height="58" as="geometry"/>
+        </mxCell>
+        <mxCell id="p3" value="3 SM2 签名&#xa;确认发送者身份" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#2563EB;fontSize=13;fontFamily=Microsoft YaHei;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="425" y="820" width="145" height="58" as="geometry"/>
+        </mxCell>
+        <mxCell id="p4" value="4 SM4 / ZUC 加密&#xa;消息或文件密文" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#F59E0B;fontSize=13;fontFamily=Microsoft YaHei;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="605" y="820" width="155" height="58" as="geometry"/>
+        </mxCell>
+        <mxCell id="p5" value="5 UDP 传输&#xa;局域网分发" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontSize=13;fontFamily=Microsoft YaHei;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="795" y="820" width="135" height="58" as="geometry"/>
+        </mxCell>
+        <mxCell id="p6" value="6 接收端解密验签&#xa;SM2 / SM3 校验" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E8FF;strokeColor=#7C3AED;fontSize=13;fontFamily=Microsoft YaHei;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="965" y="820" width="170" height="58" as="geometry"/>
+        </mxCell>
+        <mxCell id="p7" value="7 日志与存证&#xa;sm_trace_logs / Sepolia" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0F2FE;strokeColor=#0284C7;fontSize=13;fontFamily=Microsoft YaHei;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="820" width="180" height="58" as="geometry"/>
+        </mxCell>
+        <mxCell id="p8" value="8 可视化展示&#xa;聊天框 / 态势面板 / PPT" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontSize=13;fontFamily=Microsoft YaHei;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="1385" y="820" width="165" height="58" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="note" value="答辩强调点：A/B/C 仍然基于 SM2、SM3、SM4、ZUC 完成通信与文件传输；新增群组、篡改实验、链上存证、Hermes Agent 共享和 SM 全量日志，都是围绕国密算法流程扩展，而不是脱离基础算法另做功能。" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=none;fontSize=15;fontColor=#1D4ED8;fontFamily=Microsoft YaHei;align=left;spacing=14;" vertex="1" parent="1">
+          <mxGeometry x="25" y="930" width="1550" height="82" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e-a-udp" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="a-client" target="udp">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e-b-udp" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="b-client" target="udp">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e-c-route" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="c-client" target="route">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e-udp-route" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#10B981;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="udp" target="route">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e-route-sm2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#F59E0B;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="route" target="sm2-auth">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e-sm2-sm3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#F59E0B;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="sm2-auth" target="sm3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e-sm3-sm4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#F59E0B;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="sm3" target="sm4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e-sm4-wrap" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#F59E0B;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="sm4" target="sm2-wrap">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e-file-zuc" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#F59E0B;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="file-transfer" target="zuc">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e-zuc-merkle" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#F59E0B;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="zuc" target="merkle">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e-sm-log" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#7C3AED;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="sm4" target="trace-log">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e-sm-hashchain" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#7C3AED;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="sm3" target="hash-chain">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e-msg-tamper-ledger" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#7C3AED;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="msg-tamper" target="ledger">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e-file-tamper-ledger" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#7C3AED;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="file-tamper" target="ledger">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e-ledger-dapp" value="可选上链" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#334155;strokeWidth=2;endArrow=block;endFill=1;fontSize=12;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="ledger" target="dapp">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e-dapp-mm" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#334155;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="dapp" target="metamask">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e-mm-sepolia" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#334155;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="metamask" target="sepolia">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e-sepolia-contract" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#334155;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="sepolia" target="contract">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e-contract-etherscan" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#334155;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="contract" target="etherscan">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e-hermes-proxy" value="SM2 授权共享" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;strokeWidth=2;dashed=1;endArrow=block;endFill=1;fontSize=12;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="hermes" target="shared-hermes">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e-shared-agent" value="加密代理通道" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#10B981;strokeWidth=2;dashed=1;endArrow=block;endFill=1;fontSize=12;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="shared-hermes" target="agent-proxy">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e-agent-sm2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#F59E0B;strokeWidth=2;dashed=1;endArrow=block;endFill=1;" edge="1" parent="1" source="agent-proxy" target="sm2-auth">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="p-e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="p1" target="p2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="p-e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="p2" target="p3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="p-e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="p3" target="p4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="p-e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="p4" target="p5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="p-e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="p5" target="p6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="p-e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="p6" target="p7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="p-e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748B;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="p7" target="p8">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
